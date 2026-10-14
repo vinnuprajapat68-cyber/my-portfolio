@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vinod Kumar | Portfolio</title>
+<style>
+:root{--bg:#07080f;--surface:#11132200;--card:rgba(255,255,255,.04);--text:#eef0ff;--muted:#9aa0c3;--a:#8f78ff;--b:#2fd6c6;--c:#ff5fa2;--border:rgba(255,255,255,.1);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6;overflow-x:hidden}
+.blob{position:fixed;border-radius:50%;filter:blur(90px);opacity:.35;z-index:-1;animation:float 14s ease-in-out infinite}
+.b1{width:420px;height:420px;background:var(--a);top:-120px;left:-120px}
+.b2{width:360px;height:360px;background:var(--b);bottom:-100px;right:-100px;animation-delay:-5s}
+.b3{width:280px;height:280px;background:var(--c);top:45%;left:55%;animation-delay:-9s;opacity:.2}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(50px,-40px) scale(1.15)}}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--b),var(--c));z-index:20}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 5vw;background:rgba(7,8,15,.7);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.logo{font-weight:800;background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav a{color:var(--muted);text-decoration:none;font-size:.95rem;transition:color .2s}
+nav a:hover{color:var(--b)}
+section{padding:80px 5vw;max-width:1000px;margin:0 auto}
+#home{min-height:82vh;display:flex;flex-direction:column;justify-content:center}
+.hi{color:var(--b);font-size:1.1rem;margin:0 0 8px;animation:wave 2.4s ease-in-out infinite;transform-origin:left}
+@keyframes wave{0%,100%{transform:translateX(0)}50%{transform:translateX(8px)}}
+h1{font-size:clamp(2.2rem,7vw,4rem);margin:0 0 12px;line-height:1.1}
+.grad{background:linear-gradient(90deg,var(--a),var(--b),var(--c),var(--a));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shift 6s linear infinite}
+@keyframes shift{to{background-position:300% 0}}
+.role{color:var(--muted);font-size:1.2rem;min-height:1.8em;margin:0 0 28px}
+.cur{display:inline-block;width:2px;height:1.1em;background:var(--b);margin-left:3px;vertical-align:middle;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.btn{display:inline-block;padding:13px 26px;border-radius:999px;background:linear-gradient(135deg,var(--a),var(--c));color:#fff;text-decoration:none;font-weight:600;margin:0 10px 10px 0;box-shadow:0 8px 30px rgba(143,120,255,.35);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 12px 40px rgba(255,95,162,.4)}
+.btn.alt{background:transparent;border:1px solid var(--a);box-shadow:none}
+h2{font-size:2rem;margin:0 0 30px}
+h2::after{content:"";display:block;width:60px;height:4px;border-radius:4px;margin-top:8px;background:linear-gradient(90deg,var(--a),var(--b))}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{display:block;color:inherit;text-decoration:none;background:var(--card);border:1px solid var(--border);border-radius:18px;padding:24px;backdrop-filter:blur(8px);transition:transform .3s,border-color .3s,box-shadow .3s;overflow-wrap:anywhere}
+.card:hover{transform:translateY(-8px);border-color:var(--a);box-shadow:0 14px 40px rgba(143,120,255,.25)}
+.card h3{margin:10px 0 6px}
+.card p{color:var(--muted);margin:0}
+.ico{font-size:2rem;display:inline-block;animation:bob 3s ease-in-out infinite}
+.card:nth-child(2) .ico{animation-delay:-1s}.card:nth-child(3) .ico{animation-delay:-2s}
+@keyframes bob{50%{transform:translateY(-6px)}}
+.tag{display:inline-block;margin-top:14px;font-size:.78rem;padding:3px 11px;border-radius:999px;border:1px solid var(--border);color:var(--b)}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .7s,transform .7s}
+.rv.on{opacity:1;transform:none}
+footer{text-align:center;padding:30px 5vw;color:var(--muted);border-top:1px solid var(--border)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<nav>
+  <div class="logo">Vinod Kumar</div>
+  <ul><li><a href="#home">Home</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul>
+</nav>
+
+<section id="home">
+  <p class="hi">Hello, World! 👋</p>
+  <h1>Hi, I'm <span class="grad">Vinod Kumar</span></h1>
+  <p class="role"><span id="typed"></span><span class="cur"></span></p>
+  <div><a class="btn" href="#projects">View Projects</a><a class="btn alt" href="#contact">Contact Me</a></div>
+</section>
+
+<section id="skills">
+  <h2 class="rv">Skills</h2>
+  <div class="grid">
+    <div class="card rv"><div class="ico">✨</div><h3>Vibe Coding</h3><p>Building ideas fast by working with AI tools to design, code and ship.</p></div>
+    <div class="card rv"><div class="ico">💻</div><h3>C &amp; C++</h3><p>Strong programming basics: logic building, data handling and problem solving.</p></div>
+    <div class="card rv"><div class="ico">🌐</div><h3>Frontend Web</h3><p>Responsive, clean websites built with HTML, CSS and JavaScript.</p></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="rv">Projects</h2>
+  <div class="grid">
+    <div class="card rv"><div class="ico">🖥️</div><h3>Frontend Website</h3><p>A responsive frontend website designed and built by me.</p><span class="tag">HTML · CSS · JS</span></div>
+    <div class="card rv"><div class="ico">⚙️</div><h3>C / C++ Programs</h3><p>Practice programs and mini projects written in C and C++.</p><span class="tag">C · C++</span></div>
+    <div class="card rv"><div class="ico">🚀</div><h3>Vibe Coded Apps</h3><p>Apps and tools created quickly with AI-assisted coding.</p><span class="tag">AI · Vibe Coding</span></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="rv">Contact Me</h2>
+  <div class="grid">
+    <a class="card rv" href="mailto:vinnuprajapat68@gmail.com"><div class="ico">📧</div><h3>Email</h3><p>vinnuprajapat68@gmail.com</p></a>
+    <a class="card rv" href="https://www.linkedin.com/in/vinod-prajapat-882244394" target="_blank" rel="noopener"><div class="ico">💼</div><h3>LinkedIn</h3><p>View Professional Profile</p></a>
+    <a class="card rv" href="https://www.instagram.com/vinod__prajapat__09" target="_blank" rel="noopener"><div class="ico">📸</div><h3>Instagram</h3><p>@vinod__prajapat__09</p></a>
+  </div>
+</section>
+
+<footer>© 2026 Made by Vinod Kumar</footer>
+
+<script>
+(function(){
+  var words=["Vibe Coder","C / C++ Programmer","Frontend Developer"],w=0,i=0,del=false,el=document.getElementById("typed");
+  function tick(){
+    var t=words[w];
+    el.textContent=t.slice(0,i);
+    if(!del&&i<t.length){i++;setTimeout(tick,90)}
+    else if(!del){del=true;setTimeout(tick,1300)}
+    else if(i>0){i--;setTimeout(tick,45)}
+    else{del=false;w=(w+1)%words.length;setTimeout(tick,300)}
+  }
+  tick();
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}})},{threshold:.15});
+  document.querySelectorAll(".rv").forEach(function(n,k){n.style.transitionDelay=(k%3)*120+"ms";io.observe(n)});
+  var bar=document.getElementById("bar");
+  addEventListener("scroll",function(){var h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+"%"},{passive:true});
+})();
+</script>
+</body>
+</html>
